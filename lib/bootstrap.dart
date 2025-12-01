@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars, document_ignores
+
 import 'dart:async';
 import 'dart:developer';
 
