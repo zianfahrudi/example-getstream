@@ -870,26 +870,26 @@ packages:
     dependency: "direct main"
     description:
       name: stream_video
-      sha256: "9777b1c32d145dbe60cb1c53a89d41cddbafe4ca9eeae00734b25bbccc6edbfe"
+      sha256: "7b00eabc7230a48341665d715b26824c14bb756494cd589c70259b469901a971"
       url: "https://pub.dev"
     source: hosted
-    version: "0.11.2"
+    version: "1.0.2"
   stream_video_flutter:
     dependency: "direct main"
     description:
       name: stream_video_flutter
-      sha256: "801406337d67cb2a33bc841e9df5f0042a001351c22b7acf2d9b7b2da9192cca"
+      sha256: b9e57b70b945f44a7ca422f3068a5f2670f69ebcdc12075b20ca80ebc96fa8d7
       url: "https://pub.dev"
     source: hosted
-    version: "0.11.2"
+    version: "1.0.2"
   stream_webrtc_flutter:
     dependency: transitive
     description:
       name: stream_webrtc_flutter
-      sha256: "55bdc60f66efec1904e885a21f95a2f9808039af1de87ba1263ea5d5c060b4e7"
+      sha256: "9ba5aaf4060411434c085ddf5684a69fd2e1b6725b3903f21e4343b1434265d7"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "2.2.0"
   string_scanner:
     dependency: transitive
     description:
@@ -1116,4 +1116,4 @@ packages:
     version: "3.1.3"
 sdks:
   dart: ">=3.9.0 <4.0.0"
-  flutter: ">=3.35.0 <4.0.0"
+  flutter: ">=3.35.0"
