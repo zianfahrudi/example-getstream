@@ -5,8 +5,16 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   battery_plus
   connectivity_plus
+  desktop_drop
+  file_selector_windows
+  gal
+  media_kit_video
   permission_handler_windows
+  record_windows
+  share_plus
   stream_webrtc_flutter
+  thumblr_windows
+  url_launcher_windows
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

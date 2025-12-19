@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app needs bluetooth permission for connecting with earpiece</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access to scan QR Code</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs location permission to determine your location in order to get a prayer schedule and qiblat</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs location permission to determine your location in order to get a prayer schedule and qiblat</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs microphone permission to start call in a Live Ustad features</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+		<string>voip</string>
+	</array>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

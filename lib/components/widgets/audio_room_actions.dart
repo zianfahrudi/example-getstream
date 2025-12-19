@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, document_ignores
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -24,6 +26,11 @@ class _AudioRoomActionsState extends State<AudioRoomActions> {
     widget.audioRoomCall.state.listen(
       (state) {
         log(state.status.toString());
+        final isUstadOnline = state.callParticipants.any(
+          (participant) => participant.userId.contains('360'),
+        );
+
+        log('ustad online: $isUstadOnline');
       },
     );
   }
@@ -51,33 +58,39 @@ class _AudioRoomActionsState extends State<AudioRoomActions> {
                 color: Colors.red,
               ),
               onPressed: () async {
-                await widget.audioRoomCall.stopLive();
-                await widget.audioRoomCall.end();
+                final result = await widget.audioRoomCall.end();
                 Navigator.of(context).pop();
-              },
-            ),
-            FloatingActionButton.extended(
-              heroTag: 'go-live',
-              label: callState.isBackstage
-                  ? const Text('Go Live')
-                  : const Text('Stop Live'),
-              icon: callState.isBackstage
-                  ? const Icon(
-                      Icons.play_arrow,
-                      color: Colors.green,
-                    )
-                  : const Icon(
-                      Icons.stop,
-                      color: Colors.red,
+                if (result.isSuccess) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Call ended successfully.'),
                     ),
-              onPressed: () async {
-                if (callState.isBackstage) {
-                  await widget.audioRoomCall.goLive();
-                } else {
-                  await widget.audioRoomCall.stopLive();
+                  );
                 }
               },
             ),
+            // FloatingActionButton.extended(
+            //   heroTag: 'go-live',
+            //   label: callState.isBackstage
+            //       ? const Text('Go Live')
+            //       : const Text('Stop Live'),
+            //   icon: callState.isBackstage
+            //       ? const Icon(
+            //           Icons.play_arrow,
+            //           color: Colors.green,
+            //         )
+            //       : const Icon(
+            //           Icons.stop,
+            //           color: Colors.red,
+            //         ),
+            //   onPressed: () async {
+            //     if (callState.isBackstage) {
+            //       await widget.audioRoomCall.goLive();
+            //     } else {
+            //       await widget.audioRoomCall.stopLive();
+            //     }
+            //   },
+            // ),
             FloatingActionButton(
               heroTag: 'microphone',
               child: _microphoneEnabled

@@ -1,11 +1,10 @@
-// ignore_for_file: lines_longer_than_80_chars, document_ignores
+// ignore_for_file: document_ignores
 
 import 'dart:async';
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
-import 'package:stream_video/stream_video.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -29,19 +28,6 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize Stream video and set the API key for our app.
-  StreamVideo(
-    'wwutz7jeaeqm',
-    user: const User(
-      info: UserInfo(
-        name: 'Yahya',
-        id: '123',
-      ),
-    ),
-    userToken:
-        'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjM1NjMzMDQsImV4cCI6MTc5NTA5OTMwNCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsInVzZXJfaWQiOiIxMjMifQ.Htlk-rirbauPBI4SqSyuoj9iLDAeF5Ib51OdMSX4Sqs',
-  );
 
   Bloc.observer = const AppBlocObserver();
 
