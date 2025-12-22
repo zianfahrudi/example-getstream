@@ -16,8 +16,8 @@ dependencies:
     sdk: flutter
   intl: ^0.20.2
   stream_chat_flutter: ^9.22.0
-  stream_video: ^0.11.2
-  stream_video_flutter: ^0.11.2
+  stream_video: ^1.2.0
+  stream_video_flutter: ^1.2.0
 
 dev_dependencies:
   bloc_test: ^10.0.0
